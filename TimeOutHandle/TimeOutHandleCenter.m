@@ -1,7 +1,9 @@
 //
-//  TimeOutHandleCenter.m
+//  TimeOutRequestManager.m
+//  flamegrace@hotmail.com
+//
 //  Created by Flame Grace on 2017/3/29.
-//  Copyright © 2017年 . All rights reserved.
+//  Copyright © 2017年 flamegrace@hotmail.com. All rights reserved.
 //
 
 #import "TimeOutHandleCenter.h"
@@ -60,7 +62,6 @@ static TimeOutHandleCenter *defaultCenter = nil;
 {
     if(!handle)
     {
-        Log(UnKnow,@"requestIdentifier为空");
         return;
     }
     
@@ -103,13 +104,18 @@ static TimeOutHandleCenter *defaultCenter = nil;
 //调用该方法会默认生成一个request对象放入请求列表中
 - (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback
 {
+    [self registerHandleWithIdentifier:identifier timeOut:timeOut timeOutCallback:timeOutCallback handleTimeBlock:nil];
+}
+
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock
+{
     TimeoutHandle *handle = [[TimeoutHandle alloc]initWithTimeout:timeOut timeOutHandle:timeOutCallback];
     handle.identifier = identifier;
     handle.time = [[NSDate date]timeIntervalSince1970];
+    handle.handleTimeBlock = handleTimeBlock;
     [handle valid];
     [self registerTimeOutHandle:handle];
 }
-
 
 
 //清理失效的请求
