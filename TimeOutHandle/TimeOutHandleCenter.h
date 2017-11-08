@@ -1,6 +1,5 @@
 //
-//  TimeOutRequestManager.h
-//  flamegrace@hotmail.com
+//  TimeOutHandleCenter.h
 //
 //  Created by Flame Grace on 2017/3/29.
 //  Copyright © 2017年 flamegrace@hotmail.com. All rights reserved.
@@ -20,7 +19,7 @@
 //注册一个超时请求，一经注册超时机制立即生效
 - (void)registerTimeOutHandle:(TimeoutHandle *)handle;
 
-//从请求列表去除一个请求
+//从超时列表去除一个handle
 - (void)removeHandleByIdentifier:(NSString *)identifier;
 /**
  注册一个超时请求，一经注册超时机制立即生效
@@ -29,15 +28,16 @@
  @param timeOut 超时时间(0不超时）
  @param timeOutCallback 超时回调
  */
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback;
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback;
 /**
  注册一个超时请求，一经注册超时机制立即生效
  
  @param identifier 此次请求的标志符
  @param timeOut 超时时间(0不超时）
  @param timeOutCallback 超时回调
- @param handleTimeBlock 等待时间的回调
+ @param handlePeriod 等待超时中的回调时间间隔
+ @param handleTimeBlock 等待超时中的回调
  */
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock;
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock;
 
 @end

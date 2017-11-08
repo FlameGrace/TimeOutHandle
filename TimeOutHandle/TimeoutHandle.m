@@ -1,6 +1,5 @@
 //
-//  Request.m
-//  flamegrace@hotmail.com
+//  TimeoutHandle.m
 //
 //  Created by Flame Grace on 16/10/20.
 //  Copyright © 2016年 flamegrace@hotmail.com. All rights reserved.
@@ -19,16 +18,26 @@
 
 @implementation TimeoutHandle
 
-- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(TimeOutCallback)timeOutHandle
-{
-    return [self initWithTimeout:timeout timeOutHandle:timeOutHandle handleTimeBlock:nil];
-}
-
-
-- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(TimeOutCallback)timeOutHandle handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock
+- (instancetype)init
 {
     if(self = [super init])
     {
+        self.handlePeriod = 1;
+    }
+    return self;
+}
+
+- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(LMTimeOutCallback)timeOutHandle
+{
+    return [self initWithTimeout:timeout timeOutHandle:timeOutHandle handlePeriod:0 handleTimeBlock:nil];
+}
+
+
+- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(LMTimeOutCallback)timeOutHandle handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock
+{
+    if(self = [super init])
+    {
+        self.handlePeriod = handlePeriod;
         self.timeout = timeout;
         self.timeOutHandle = timeOutHandle;
         self.handleTimeBlock = handleTimeBlock;
@@ -42,7 +51,7 @@
 {
     [self endTimer];
     self.startTime = [[NSDate date]timeIntervalSince1970];
-    NSTimeInterval period = 1.0; //设置时间间隔
+    NSTimeInterval period = self.handlePeriod; //设置时间间隔
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), period * NSEC_PER_SEC, 0); //每秒执行
@@ -55,15 +64,21 @@
 
 - (void)endTimer
 {
-    self.timer = nil;
-    self.startTime = 0;
+    if(self.timer)
+    {
+        dispatch_source_cancel(self.timer);
+        self.timer = nil;
+        self.startTime = 0;
+    }
 }
 
-//设置
-- (void)setTimeout:(NSInteger)timeout
+- (void)setHandlePeriod:(NSTimeInterval)handlePeriod
 {
-    if(_timeout == timeout)return;
-    _timeout = timeout;
+    if(handlePeriod <= 0)
+    {
+        handlePeriod = 1;
+    }
+    _handlePeriod = handlePeriod;
 }
 
 

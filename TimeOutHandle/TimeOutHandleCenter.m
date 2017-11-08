@@ -1,6 +1,5 @@
 //
-//  TimeOutRequestManager.m
-//  flamegrace@hotmail.com
+//  TimeOutHandleCenter.m
 //
 //  Created by Flame Grace on 2017/3/29.
 //  Copyright © 2017年 flamegrace@hotmail.com. All rights reserved.
@@ -71,13 +70,10 @@ static TimeOutHandleCenter *defaultCenter = nil;
         NSTimeInterval now = [[NSDate date]timeIntervalSince1970];
         identifier = [NSString stringWithFormat:@"%f",now];
     }
-    
-    if([self.handles objectForKey:identifier])
-    {
-        [self removeHandleByIdentifier:identifier];
-    }
     @synchronized (self) {
+        [self removeHandleByIdentifier:identifier];
         [self.handles setObject:handle forKey:identifier];
+        [handle valid];
         [self startTimer];
     }
 }
@@ -102,18 +98,18 @@ static TimeOutHandleCenter *defaultCenter = nil;
 
 //发送数据，requestIdentifier此次请求的标志符，timeOut超时时间(0不超时，不能大于100），timeOutCallback，超时回调
 //调用该方法会默认生成一个request对象放入请求列表中
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback
 {
-    [self registerHandleWithIdentifier:identifier timeOut:timeOut timeOutCallback:timeOutCallback handleTimeBlock:nil];
+    [self registerHandleWithIdentifier:identifier timeOut:timeOut timeOutCallback:timeOutCallback handlePeriod:0 handleTimeBlock:nil];
 }
 
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock
 {
     TimeoutHandle *handle = [[TimeoutHandle alloc]initWithTimeout:timeOut timeOutHandle:timeOutCallback];
     handle.identifier = identifier;
+    handle.handlePeriod = handlePeriod;
     handle.time = [[NSDate date]timeIntervalSince1970];
     handle.handleTimeBlock = handleTimeBlock;
-    [handle valid];
     [self registerTimeOutHandle:handle];
 }
 
