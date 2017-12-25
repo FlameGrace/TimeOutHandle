@@ -28,7 +28,7 @@
  @param timeOut 超时时间(0不超时）
  @param timeOutCallback 超时回调
  */
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback;
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSTimeInterval)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback;
 /**
  注册一个超时请求，一经注册超时机制立即生效
  
@@ -38,6 +38,16 @@
  @param handlePeriod 等待超时中的回调时间间隔
  @param handleTimeBlock 等待超时中的回调
  */
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock;
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSTimeInterval)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock;
+
+/**
+ 注册一个超时请求，一经注册超时机制立即生效
+ 
+ @param identifier 此次请求的标志符
+ @param timeOut 超时时间(0不超时）
+ @param timeOutCallback 超时回调
+ @param handleTimeBlock 等待超时中的回调,每隔1秒回调一次
+ */
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSTimeInterval)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock;
 
 @end

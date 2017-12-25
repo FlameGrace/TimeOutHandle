@@ -11,8 +11,8 @@
 @class TimeoutHandle;
 
 //超时回调
-typedef void(^LMTimeOutCallback)(TimeoutHandle *handle);
-typedef void(^LMTimeOutHandleTimeCallback)(TimeoutHandle *handle, NSTimeInterval handleTime);
+typedef void(^TimeOutCallback)(TimeoutHandle *handle);
+typedef void(^TimeOutHandleTimeCallback)(TimeoutHandle *handle, NSTimeInterval handleTime);
 
 @interface TimeoutHandle : NSObject
 //注册时间
@@ -20,13 +20,13 @@ typedef void(^LMTimeOutHandleTimeCallback)(TimeoutHandle *handle, NSTimeInterval
 //注册标识符
 @property (strong, nonatomic) NSString *identifier;
 //超时回调
-@property (copy, nonatomic) LMTimeOutCallback timeOutHandle;
+@property (copy, nonatomic) TimeOutCallback timeOutHandle;
 //等待超时中回调间隔,默认1s
 @property (assign, nonatomic) NSTimeInterval handlePeriod;
 //handleTime回调
-@property (copy, nonatomic) LMTimeOutHandleTimeCallback handleTimeBlock;
+@property (copy, nonatomic) TimeOutHandleTimeCallback handleTimeBlock;
 //超时时间，<=0时不回调
-@property (assign, nonatomic) NSInteger timeout;
+@property (assign, nonatomic) NSTimeInterval timeout;
 //handle是否失效
 @property (readonly, nonatomic) BOOL isValid;
 
@@ -35,8 +35,8 @@ typedef void(^LMTimeOutHandleTimeCallback)(TimeoutHandle *handle, NSTimeInterval
 //让handle失效
 - (void)invalidate;
 
-- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(LMTimeOutCallback)timeOutHandle;
+- (id)initWithTimeout:(NSTimeInterval)timeout timeOutHandle:(TimeOutCallback)timeOutHandle;
 
-- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(LMTimeOutCallback)timeOutHandle handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock;
+- (id)initWithTimeout:(NSTimeInterval)timeout timeOutHandle:(TimeOutCallback)timeOutHandle handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock;
 
 @end

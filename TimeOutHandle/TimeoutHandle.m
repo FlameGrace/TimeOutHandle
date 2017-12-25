@@ -6,11 +6,11 @@
 //
 
 #import "TimeoutHandle.h"
+#import "DispatchTimer.h"
 
 @interface TimeoutHandle()
 
-@property (strong, nonatomic) dispatch_source_t timer;
-@property (strong, nonatomic) NSTimer *timeOutTimer;
+@property (strong, nonatomic) DispatchTimer *timer;
 @property (assign, nonatomic) NSTimeInterval startTime;
 @property (readwrite, assign, nonatomic) BOOL isValid;
 
@@ -27,13 +27,13 @@
     return self;
 }
 
-- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(LMTimeOutCallback)timeOutHandle
+- (id)initWithTimeout:(NSTimeInterval)timeout timeOutHandle:(TimeOutCallback)timeOutHandle
 {
     return [self initWithTimeout:timeout timeOutHandle:timeOutHandle handlePeriod:0 handleTimeBlock:nil];
 }
 
 
-- (id)initWithTimeout:(NSInteger)timeout timeOutHandle:(LMTimeOutCallback)timeOutHandle handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock
+- (id)initWithTimeout:(NSTimeInterval)timeout timeOutHandle:(TimeOutCallback)timeOutHandle handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock
 {
     if(self = [super init])
     {
@@ -51,22 +51,18 @@
 {
     [self endTimer];
     self.startTime = [[NSDate date]timeIntervalSince1970];
-    NSTimeInterval period = self.handlePeriod; //设置时间间隔
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), period * NSEC_PER_SEC, 0); //每秒执行
-    dispatch_source_set_event_handler(self.timer, ^{ //在这里执行事件
-        [self handleTimer];
-    });
-    
-    dispatch_resume(self.timer);
+    __weak typeof(self) weakSelf = self;
+    self.timer = [[DispatchTimer alloc]initWithDuration:self.handlePeriod handleBlock:^{
+        [weakSelf handleTimer];
+    }];
+    [self.timer startTimer];
 }
 
 - (void)endTimer
 {
     if(self.timer)
     {
-        dispatch_source_cancel(self.timer);
+        [self.timer endTimer];
         self.timer = nil;
         self.startTime = 0;
     }

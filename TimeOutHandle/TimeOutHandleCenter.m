@@ -98,16 +98,26 @@ static TimeOutHandleCenter *defaultCenter = nil;
 
 //发送数据，requestIdentifier此次请求的标志符，timeOut超时时间(0不超时，不能大于100），timeOutCallback，超时回调
 //调用该方法会默认生成一个request对象放入请求列表中
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSTimeInterval)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback
 {
     [self registerHandleWithIdentifier:identifier timeOut:timeOut timeOutCallback:timeOutCallback handlePeriod:0 handleTimeBlock:nil];
 }
 
-- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSInteger)timeOut timeOutCallback:(LMTimeOutCallback)timeOutCallback handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(LMTimeOutHandleTimeCallback)handleTimeBlock
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSTimeInterval)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handlePeriod:(NSTimeInterval)handlePeriod handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock
 {
     TimeoutHandle *handle = [[TimeoutHandle alloc]initWithTimeout:timeOut timeOutHandle:timeOutCallback];
     handle.identifier = identifier;
     handle.handlePeriod = handlePeriod;
+    handle.time = [[NSDate date]timeIntervalSince1970];
+    handle.handleTimeBlock = handleTimeBlock;
+    [self registerTimeOutHandle:handle];
+}
+
+- (void)registerHandleWithIdentifier:(NSString *)identifier timeOut:(NSTimeInterval)timeOut timeOutCallback:(TimeOutCallback)timeOutCallback handleTimeBlock:(TimeOutHandleTimeCallback)handleTimeBlock
+{
+    TimeoutHandle *handle = [[TimeoutHandle alloc]initWithTimeout:timeOut timeOutHandle:timeOutCallback];
+    handle.identifier = identifier;
+    handle.handlePeriod = 1.0;
     handle.time = [[NSDate date]timeIntervalSince1970];
     handle.handleTimeBlock = handleTimeBlock;
     [self registerTimeOutHandle:handle];
