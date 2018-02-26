@@ -1,0 +1,15 @@
+PODS:
+  - DispatchTimer (0.0.1)
+  - TimeOutHandle (0.0.2):
+    - DispatchTimer
+
+DEPENDENCIES:
+  - TimeOutHandle
+
+SPEC CHECKSUMS:
+  DispatchTimer: 13fa16973c5365f12d0748dccf83da0cf4826006
+  TimeOutHandle: f96a646c0ca413fa5ab5a51863c969ec7d0afe65
+
+PODFILE CHECKSUM: fd2237b061327c1a2125dd6ee5affd82febd26de
+
+COCOAPODS: 1.4.0

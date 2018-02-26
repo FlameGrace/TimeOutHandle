@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3055D3F7324AE6D7F256CED6DFD8BAB7 /* DispatchTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F63BA163B07CBF487E33B028EC7C0 /* DispatchTimer-dummy.m */; };
+		461306FBF3E2924905BD41E6E65CBD37 /* TimeoutHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6F51AD05C96CF6172D7B8368FC6B86 /* TimeoutHandle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		463C2BDC13621B1EB22FDDA5DE8A9F19 /* TimeOutHandle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9F10B31D37E592586B6F651234B55 /* TimeOutHandle-dummy.m */; };
+		50A7EE583D606228C0FE443B1070E3BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6510C30175E011782B03D6C9F2D62A8B /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA944E1D5D966DBCA7EB7C661855A95 /* Pods-Demo-dummy.m */; };
+		8738C3D9840665FDE20C1EB434B1197A /* TimeoutHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B09599D3AF8F2DED98318EF54B4D57F /* TimeoutHandle.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9EF91444C50ECF77E5E3B1FB16026511 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A7C116576FBD519BC885FFBBF78C4235 /* DispatchTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E41BEDD533D0A0BEFF1CFAAEFB70C05 /* DispatchTimer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD9F35C098438475689CC9DE76C3CBC1 /* DispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = D209C9FFB21DA2B69D537B0F346028C8 /* DispatchTimer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D7119B609822D2A50EE410BC4743C14D /* TimeOutHandleCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 18FFBEA16FB7850AB1795A8D8DAD6D9C /* TimeOutHandleCenter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DBCC93369B3AF4AC4BA86B36FC0DD6E2 /* TimeOutHandleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B028E5B8A4C7AB155591C0F2272A8C32 /* TimeOutHandleCenter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD65A393EA6ADB05A871EB612C0E118E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		408478C84C0AC71E9AD0BD00568F7A58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF80D5E290D8551584BCBC49CC33BD97;
+			remoteInfo = DispatchTimer;
+		};
+		9563AF73DC68463FF7C211A49D2D119B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75B1DC16170E7782A714DBE01148F02C;
+			remoteInfo = TimeOutHandle;
+		};
+		A83F327BFCD0DBB1CE18BA6413A0FC2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF80D5E290D8551584BCBC49CC33BD97;
+			remoteInfo = DispatchTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AA4CC1D789DA2783447C62D0F699C77 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		0B09599D3AF8F2DED98318EF54B4D57F /* TimeoutHandle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TimeoutHandle.m; path = TimeOutHandle/TimeoutHandle.m; sourceTree = "<group>"; };
+		18FFBEA16FB7850AB1795A8D8DAD6D9C /* TimeOutHandleCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TimeOutHandleCenter.h; path = TimeOutHandle/TimeOutHandleCenter.h; sourceTree = "<group>"; };
+		1977615729BCEEED329B6E5322D275B6 /* TimeOutHandle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TimeOutHandle-prefix.pch"; sourceTree = "<group>"; };
+		1A6F51AD05C96CF6172D7B8368FC6B86 /* TimeoutHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TimeoutHandle.h; path = TimeOutHandle/TimeoutHandle.h; sourceTree = "<group>"; };
+		1ED9F10B31D37E592586B6F651234B55 /* TimeOutHandle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TimeOutHandle-dummy.m"; sourceTree = "<group>"; };
+		3C2F63BA163B07CBF487E33B028EC7C0 /* DispatchTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DispatchTimer-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6F5DD532ECDA969984034D51B0F56454 /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7C25A7C4E5297AA2BC48F80642A57624 /* libTimeOutHandle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTimeOutHandle.a; path = libTimeOutHandle.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E61E2F2E514A86FEC211F0AD10D8AC1 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		8E41BEDD533D0A0BEFF1CFAAEFB70C05 /* DispatchTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DispatchTimer.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		961489B0CFA7D5AFD0A1EE26884A9E77 /* DispatchTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DispatchTimer-prefix.pch"; sourceTree = "<group>"; };
+		ABB788449B53DD15092D93A99F9DEE23 /* DispatchTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DispatchTimer.xcconfig; sourceTree = "<group>"; };
+		B028E5B8A4C7AB155591C0F2272A8C32 /* TimeOutHandleCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TimeOutHandleCenter.m; path = TimeOutHandle/TimeOutHandleCenter.m; sourceTree = "<group>"; };
+		BA98EAACDAFB971DF9EDCF9DEA28BE22 /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
+		BC6F318B8C726435B2FF8566E7AC50B9 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		D209C9FFB21DA2B69D537B0F346028C8 /* DispatchTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DispatchTimer.m; sourceTree = "<group>"; };
+		D25544B348B28F2BBA3D9053B844D7D4 /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
+		DCA944E1D5D966DBCA7EB7C661855A95 /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
+		E59EBACE747EC744BDFE0BA8A9274FD9 /* TimeOutHandle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TimeOutHandle.xcconfig; sourceTree = "<group>"; };
+		F23091489CFF6011803CA136EFC446F4 /* libDispatchTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDispatchTimer.a; path = libDispatchTimer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DA313AFF353C3C80BC9B1545FF3449 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Demo.a"; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18DAF7C3F4BE70AC1077E52FA09D9FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD65A393EA6ADB05A871EB612C0E118E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		502450152B9FF884D5670C5C25C23D63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EF91444C50ECF77E5E3B1FB16026511 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6740BB947CE23D8C846089334C7E747 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A7EE583D606228C0FE443B1070E3BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		105A24935BC6A33BE66754CE51C36C31 /* Pods-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				6F5DD532ECDA969984034D51B0F56454 /* Pods-Demo-acknowledgements.markdown */,
+				0AA4CC1D789DA2783447C62D0F699C77 /* Pods-Demo-acknowledgements.plist */,
+				DCA944E1D5D966DBCA7EB7C661855A95 /* Pods-Demo-dummy.m */,
+				BA98EAACDAFB971DF9EDCF9DEA28BE22 /* Pods-Demo-frameworks.sh */,
+				D25544B348B28F2BBA3D9053B844D7D4 /* Pods-Demo-resources.sh */,
+				7E61E2F2E514A86FEC211F0AD10D8AC1 /* Pods-Demo.debug.xcconfig */,
+				BC6F318B8C726435B2FF8566E7AC50B9 /* Pods-Demo.release.xcconfig */,
+			);
+			name = "Pods-Demo";
+			path = "Target Support Files/Pods-Demo";
+			sourceTree = "<group>";
+		};
+		245F88DB649B1331D9A0A2C0DC72560B /* DispatchTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8E41BEDD533D0A0BEFF1CFAAEFB70C05 /* DispatchTimer.h */,
+				D209C9FFB21DA2B69D537B0F346028C8 /* DispatchTimer.m */,
+				DE476EA39841A53D343D4D29A899F8E7 /* Support Files */,
+			);
+			name = DispatchTimer;
+			path = DispatchTimer;
+			sourceTree = "<group>";
+		};
+		42C43E8DBC86B87E1A81FB6EB36DD511 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				245F88DB649B1331D9A0A2C0DC72560B /* DispatchTimer */,
+				478D7341FFA2A1966EAE0D3089525242 /* TimeOutHandle */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		478D7341FFA2A1966EAE0D3089525242 /* TimeOutHandle */ = {
+			isa = PBXGroup;
+			children = (
+				1A6F51AD05C96CF6172D7B8368FC6B86 /* TimeoutHandle.h */,
+				0B09599D3AF8F2DED98318EF54B4D57F /* TimeoutHandle.m */,
+				18FFBEA16FB7850AB1795A8D8DAD6D9C /* TimeOutHandleCenter.h */,
+				B028E5B8A4C7AB155591C0F2272A8C32 /* TimeOutHandleCenter.m */,
+				B3666FA90D888ED77621D8AF2399BB39 /* Support Files */,
+			);
+			name = TimeOutHandle;
+			path = TimeOutHandle;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				42C43E8DBC86B87E1A81FB6EB36DD511 /* Pods */,
+				86308183C5E99DB9FEEDCB7C9DB55CE7 /* Products */,
+				F64792801741A31D953EA71E1A34CBCA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		86308183C5E99DB9FEEDCB7C9DB55CE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F23091489CFF6011803CA136EFC446F4 /* libDispatchTimer.a */,
+				F3DA313AFF353C3C80BC9B1545FF3449 /* libPods-Demo.a */,
+				7C25A7C4E5297AA2BC48F80642A57624 /* libTimeOutHandle.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3666FA90D888ED77621D8AF2399BB39 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E59EBACE747EC744BDFE0BA8A9274FD9 /* TimeOutHandle.xcconfig */,
+				1ED9F10B31D37E592586B6F651234B55 /* TimeOutHandle-dummy.m */,
+				1977615729BCEEED329B6E5322D275B6 /* TimeOutHandle-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TimeOutHandle";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE476EA39841A53D343D4D29A899F8E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABB788449B53DD15092D93A99F9DEE23 /* DispatchTimer.xcconfig */,
+				3C2F63BA163B07CBF487E33B028EC7C0 /* DispatchTimer-dummy.m */,
+				961489B0CFA7D5AFD0A1EE26884A9E77 /* DispatchTimer-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DispatchTimer";
+			sourceTree = "<group>";
+		};
+		F64792801741A31D953EA71E1A34CBCA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				105A24935BC6A33BE66754CE51C36C31 /* Pods-Demo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		781BEA371C73A2EACE6DC3A18928B715 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461306FBF3E2924905BD41E6E65CBD37 /* TimeoutHandle.h in Headers */,
+				D7119B609822D2A50EE410BC4743C14D /* TimeOutHandleCenter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCE9DE82AA2DE13A5989A1BBF7B07E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7C116576FBD519BC885FFBBF78C4235 /* DispatchTimer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		071F1949119C729A20CEF63CC1E60B5B /* Pods-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CABDAF4B8B64B5E5F5C91785CDD8371 /* Build configuration list for PBXNativeTarget "Pods-Demo" */;
+			buildPhases = (
+				6434F52BE48513973AD7EFA4BD86A64F /* Sources */,
+				18DAF7C3F4BE70AC1077E52FA09D9FE8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99728C68DBB192B9C84D46ECA16388C4 /* PBXTargetDependency */,
+				16129D6EBA758800ED863E0A43FA2170 /* PBXTargetDependency */,
+			);
+			name = "Pods-Demo";
+			productName = "Pods-Demo";
+			productReference = F3DA313AFF353C3C80BC9B1545FF3449 /* libPods-Demo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		75B1DC16170E7782A714DBE01148F02C /* TimeOutHandle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E31AF157049D4C4ECA36951E592ACC /* Build configuration list for PBXNativeTarget "TimeOutHandle" */;
+			buildPhases = (
+				298077F24CCF22FBAEDEB7E70F444DCB /* Sources */,
+				502450152B9FF884D5670C5C25C23D63 /* Frameworks */,
+				781BEA371C73A2EACE6DC3A18928B715 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F1E755A285AB4F8BBF5B3A2C6CF935B /* PBXTargetDependency */,
+			);
+			name = TimeOutHandle;
+			productName = TimeOutHandle;
+			productReference = 7C25A7C4E5297AA2BC48F80642A57624 /* libTimeOutHandle.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AF80D5E290D8551584BCBC49CC33BD97 /* DispatchTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AB100803A3B2A8330A8679DCA70BC1A /* Build configuration list for PBXNativeTarget "DispatchTimer" */;
+			buildPhases = (
+				B6459D5722A3AB7DCFA6ECD8A6BFB520 /* Sources */,
+				A6740BB947CE23D8C846089334C7E747 /* Frameworks */,
+				ECCE9DE82AA2DE13A5989A1BBF7B07E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DispatchTimer;
+			productName = DispatchTimer;
+			productReference = F23091489CFF6011803CA136EFC446F4 /* libDispatchTimer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 86308183C5E99DB9FEEDCB7C9DB55CE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF80D5E290D8551584BCBC49CC33BD97 /* DispatchTimer */,
+				071F1949119C729A20CEF63CC1E60B5B /* Pods-Demo */,
+				75B1DC16170E7782A714DBE01148F02C /* TimeOutHandle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		298077F24CCF22FBAEDEB7E70F444DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				463C2BDC13621B1EB22FDDA5DE8A9F19 /* TimeOutHandle-dummy.m in Sources */,
+				8738C3D9840665FDE20C1EB434B1197A /* TimeoutHandle.m in Sources */,
+				DBCC93369B3AF4AC4BA86B36FC0DD6E2 /* TimeOutHandleCenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6434F52BE48513973AD7EFA4BD86A64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6510C30175E011782B03D6C9F2D62A8B /* Pods-Demo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6459D5722A3AB7DCFA6ECD8A6BFB520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3055D3F7324AE6D7F256CED6DFD8BAB7 /* DispatchTimer-dummy.m in Sources */,
+				AD9F35C098438475689CC9DE76C3CBC1 /* DispatchTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16129D6EBA758800ED863E0A43FA2170 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TimeOutHandle;
+			target = 75B1DC16170E7782A714DBE01148F02C /* TimeOutHandle */;
+			targetProxy = 9563AF73DC68463FF7C211A49D2D119B /* PBXContainerItemProxy */;
+		};
+		2F1E755A285AB4F8BBF5B3A2C6CF935B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DispatchTimer;
+			target = AF80D5E290D8551584BCBC49CC33BD97 /* DispatchTimer */;
+			targetProxy = A83F327BFCD0DBB1CE18BA6413A0FC2F /* PBXContainerItemProxy */;
+		};
+		99728C68DBB192B9C84D46ECA16388C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DispatchTimer;
+			target = AF80D5E290D8551584BCBC49CC33BD97 /* DispatchTimer */;
+			targetProxy = 408478C84C0AC71E9AD0BD00568F7A58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05494CE2FCF58DEAC19830C89CC2424F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59EBACE747EC744BDFE0BA8A9274FD9 /* TimeOutHandle.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TimeOutHandle/TimeOutHandle-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DDC9F84EAF82648662FD80FF4EB063C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59EBACE747EC744BDFE0BA8A9274FD9 /* TimeOutHandle.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TimeOutHandle/TimeOutHandle-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		908DD6183587364E79FF0E87DB5859C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC6F318B8C726435B2FF8566E7AC50B9 /* Pods-Demo.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E78E0CB9005A55A3378995FFCAA166C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E61E2F2E514A86FEC211F0AD10D8AC1 /* Pods-Demo.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3E37FB098AE76440E29106ADBF00CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D6DAEAA3BD5B8128730C9BE1B24023B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABB788449B53DD15092D93A99F9DEE23 /* DispatchTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DispatchTimer/DispatchTimer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA03565BE765DB55C6448FB363A44481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E517597671D7DC0B775122C830497D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABB788449B53DD15092D93A99F9DEE23 /* DispatchTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DispatchTimer/DispatchTimer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AB100803A3B2A8330A8679DCA70BC1A /* Build configuration list for PBXNativeTarget "DispatchTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6DAEAA3BD5B8128730C9BE1B24023B8 /* Debug */,
+				E517597671D7DC0B775122C830497D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3E37FB098AE76440E29106ADBF00CEB /* Debug */,
+				DA03565BE765DB55C6448FB363A44481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38E31AF157049D4C4ECA36951E592ACC /* Build configuration list for PBXNativeTarget "TimeOutHandle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DDC9F84EAF82648662FD80FF4EB063C /* Debug */,
+				05494CE2FCF58DEAC19830C89CC2424F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CABDAF4B8B64B5E5F5C91785CDD8371 /* Build configuration list for PBXNativeTarget "Pods-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E78E0CB9005A55A3378995FFCAA166C /* Debug */,
+				908DD6183587364E79FF0E87DB5859C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
