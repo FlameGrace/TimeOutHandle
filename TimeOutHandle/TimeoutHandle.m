@@ -49,6 +49,11 @@
 
 - (void)startTimer
 {
+    if((self.timeout >0 && self.timeout < 1) || self.handlePeriod > self.timeout)
+    {
+        self.handlePeriod = self.timeout;
+    }
+    
     [self endTimer];
     self.startTime = [[NSDate date]timeIntervalSince1970];
     __weak typeof(self) weakSelf = self;
