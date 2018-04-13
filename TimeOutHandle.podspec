@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "BSD", :file => "LICENSE" }
   s.author             = { "FlameGrace" => "flamegrace@hotmail.com" }
   s.ios.deployment_target = "8.0"
-  s.source       = { :git => "https://github.com/FlameGrace/TimeOutHandle.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/FlameGrace/TimeOutHandle.git", :tag => "0.0.4" }
   s.source_files  = "TimeOutHandle", "TimeOutHandle/**/*.{h,m}"
   s.public_header_files = "TimeOutHandle/**/*.h"
   s.dependency "DispatchTimer"
