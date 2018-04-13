@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "TimeOutHandle"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A timeout handle tool for iOS."
   s.homepage     = "https://github.com/FlameGrace/TimeOutHandle"
   s.license      = { :type => "BSD", :file => "LICENSE" }
