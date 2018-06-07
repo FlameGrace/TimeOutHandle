@@ -22,6 +22,7 @@
 {
     if(self = [super init])
     {
+        self.isStop = YES;
         self.retryCount = 1;
         self.retryDuration = 5;
     }
@@ -30,11 +31,16 @@
 
 - (void)start
 {
-    [self stop];
-    self.isStop = NO;
-    self.currentCount = 0;
-    [self retry];
-    
+    @synchronized (self)
+    {
+        if(!self.isStop)
+        {
+            return;
+        }
+        self.isStop = NO;
+        self.currentCount = 0;
+        [self retry];
+    }
 }
 
 - (void)retry
@@ -45,20 +51,24 @@
     }
     if(self.currentCount >= self.retryCount && self.retryCount > 0)
     {
-        if(self.failedBlock)
+        [self stop];
+        RetryVoidBlock failedBlock = self.failedBlock;
+        if(failedBlock)
         {
-            self.failedBlock();
+            failedBlock();
         }
         return;
     }
     self.currentCount ++;
     __weak typeof(self) weakSelf = self;
     [[TimeOutHandleCenter defaultCenter]registerHandleWithIdentifier:[NSString stringWithFormat:@"%@_%p",NSStringFromClass([self class]),self] timeOut:self.retryDuration timeOutCallback:^(TimeoutHandle *handle) {
-        [weakSelf retry];
+        __strong typeof(weakSelf) self = weakSelf;
+        [self retry];
     }];
-    if(self.retryBlock)
+    RetryVoidBlock retryBlock = self.retryBlock;
+    if(retryBlock)
     {
-        self.retryBlock();
+        retryBlock();
     }
 }
 
@@ -67,6 +77,11 @@
     self.isStop = YES;
     [[TimeOutHandleCenter defaultCenter]removeHandleByIdentifier:[NSString stringWithFormat:@"%@_%p",NSStringFromClass([self class]),self]];
     self.currentCount = 0;
+    RetryVoidBlock stopBlock = self.stopBlock;
+    if(stopBlock)
+    {
+        stopBlock();
+    }
 }
 
 - (void)dealloc
@@ -93,3 +108,4 @@
 }
 
 @end
+

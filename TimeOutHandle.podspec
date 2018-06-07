@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name         = "TimeOutHandle"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "A timeout handle tool for iOS."
   s.homepage     = "https://github.com/FlameGrace/TimeOutHandle"
   s.license      = { :type => "BSD", :file => "LICENSE" }
   s.author             = { "FlameGrace" => "flamegrace@hotmail.com" }
   s.ios.deployment_target = "8.0"
-  s.source       = { :git => "https://github.com/FlameGrace/TimeOutHandle.git", :tag => "0.0.4" }
+  s.source       = { :git => "https://github.com/FlameGrace/TimeOutHandle.git", :tag => "0.0.5" }
   s.source_files  = "TimeOutHandle", "TimeOutHandle/**/*.{h,m}"
   s.public_header_files = "TimeOutHandle/**/*.h"
   s.dependency "DispatchTimer"

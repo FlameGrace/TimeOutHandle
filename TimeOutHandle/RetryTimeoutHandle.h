@@ -15,8 +15,9 @@ typedef void(^RetryVoidBlock)(void);
 
 @property (copy, nonatomic) RetryVoidBlock failedBlock;
 @property (copy, nonatomic) RetryVoidBlock retryBlock;
+@property (copy, nonatomic) RetryVoidBlock stopBlock;
 /**
-    重试次数，如果设置为0，则一直重试
+ 重试次数，如果设置为0，则一直重试
  */
 @property (assign, nonatomic) NSInteger retryCount;
 
