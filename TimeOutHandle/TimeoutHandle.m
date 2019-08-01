@@ -65,12 +65,8 @@
 
 - (void)endTimer
 {
-    if(self.timer)
-    {
-        [self.timer endTimer];
-        self.timer = nil;
-        self.startTime = 0;
-    }
+    [self.timer endTimer];
+    self.timer = nil;
 }
 
 - (void)setHandlePeriod:(NSTimeInterval)handlePeriod
@@ -86,18 +82,21 @@
 //计时器回调方法
 - (void)handleTimer
 {
-    
     NSTimeInterval now = [[NSDate date]timeIntervalSince1970];
     NSTimeInterval handleTime = now - self.startTime;
-    if(self.handleTimeBlock)
+    TimeOutHandleTimeCallback handleTimeBlock = self.handleTimeBlock;
+    if(handleTimeBlock && self.isValid)
     {
-        self.handleTimeBlock(self, handleTime);
+        handleTimeBlock(self, handleTime);
     }
-    if(handleTime >= self.timeout)
+    if(handleTime >= self.timeout && self.isValid)
     {
-        [self endTimer];
-        self.isValid = NO;
-        if(self.timeOutHandle)self.timeOutHandle(self);
+        [self invalidate];
+        TimeOutCallback timeOutHandle = self.timeOutHandle;
+        if(timeOutHandle)
+        {
+            timeOutHandle(self);
+        }
     }
 }
 
@@ -113,7 +112,8 @@
 //请求失效
 - (void)invalidate
 {
-    [self endTimer];
     self.isValid = NO;
+    [self endTimer];
 }
+
 @end;

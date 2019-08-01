@@ -43,6 +43,11 @@
     }
 }
 
+- (BOOL)isRetring
+{
+    return !self.isStop;
+}
+
 - (void)retry
 {
     if(self.isStop)
